@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:private_diary/screens/auth.dart';
+
 
 void main() => runApp(PrivateDiary());
 
