@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:private_diary/screens/auth.dart';
+import 'package:private_diary/screens/authy.dart';
 
 
-void main() => runApp(PrivateDiary());
+void main() async {
+  runApp(SharedDiary());
+}
 
-class PrivateDiary extends StatelessWidget {
-  const PrivateDiary({Key? key}) : super(key: key);
+class SharedDiary extends StatelessWidget {
+  const SharedDiary({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
