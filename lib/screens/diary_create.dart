@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-
 class DiaryCreate extends StatefulWidget {
   @override
   _DiaryCreateState createState() => _DiaryCreateState();
@@ -51,9 +50,7 @@ class _DiaryCreateState extends State<DiaryCreate> {
               ),
               keyboardType: TextInputType.multiline,
               maxLines: null,
-              style: TextStyle(
-                fontSize: 20.0
-              ),
+              style: TextStyle(fontSize: 20.0),
               controller: bodyTextController,
             ),
             Center(
@@ -63,11 +60,11 @@ class _DiaryCreateState extends State<DiaryCreate> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      width: 300,
-                      child: _image == null
-                        ? Text('写真を選んで下さい')
-                        : Image.file(_image)),
-                    ),
+                        width: 300,
+                        child: _image == null
+                            ? Text('写真を選んで下さい')
+                            : Image.file(_image)),
+                  ),
                 ],
               ),
             ),
@@ -77,6 +74,13 @@ class _DiaryCreateState extends State<DiaryCreate> {
                 FloatingActionButton(
                   onPressed: getImageFromGallery,
                   child: Icon(Icons.photo_library),
+                ),
+                ElevatedButton(
+                  onPressed: () => null, // TODO 日記一覧画面に遷移 diary_list
+                  child: Text(
+                    '登録',
+                    style: TextStyle(fontSize: 15.0),
+                  ),
                 ),
               ],
             )
