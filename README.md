@@ -1,4 +1,4 @@
-# private_diary
+# shared_diary
 
 A new Flutter project.
 
