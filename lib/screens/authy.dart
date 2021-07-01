@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
-import 'package:private_diary/screens/diary_list.dart';
+import 'package:shared_diary/screens/diary_list.dart';
 
 
 class Login extends StatefulWidget {

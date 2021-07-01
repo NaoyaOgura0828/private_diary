@@ -12,7 +12,7 @@ class _DiaryCreateState extends State<DiaryCreate> {
   TextEditingController titleControler = TextEditingController();
   TextEditingController bodyTextController = TextEditingController();
   final picker = ImagePicker();
-  File _image; // import 'dart:io' 失敗している？
+  File? _image;
 
   Future getImageFromGallery() async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
@@ -29,7 +29,7 @@ class _DiaryCreateState extends State<DiaryCreate> {
         title: Text('日記作成'),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         padding: EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
@@ -60,10 +60,10 @@ class _DiaryCreateState extends State<DiaryCreate> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        width: 300,
+                        width: 100,
                         child: _image == null
                             ? Text('写真を選んで下さい')
-                            : Image.file(_image)),
+                            : Image.file(_image!)),
                   ),
                 ],
               ),

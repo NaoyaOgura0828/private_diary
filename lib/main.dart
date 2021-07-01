@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:private_diary/screens/authy.dart';
-import 'package:private_diary/screens/diary_create.dart';
+
+import 'package:shared_diary/screens/authy.dart';
+import 'package:shared_diary/screens/diary_create.dart';
+import 'package:shared_diary/screens/diary_detail.dart';
+import 'package:shared_diary/screens/diary_list.dart';
+
+import 'package:shared_diary/test.dart';
 
 
 void main() async {

@@ -27,12 +27,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  File _image;
+  File? _image;
   final picker = ImagePicker();
 
   Future getImageFromCamera() async {
     final pickedFile = await picker.getImage(source: ImageSource.camera);
-
+    if (pickedFile == null) {
+      return;
+    }
     setState(() {
       _image = File(pickedFile.path);
     });
@@ -40,6 +42,10 @@ class _HomePageState extends State<HomePage> {
 
   Future getImageFromGallery() async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
+
+    if (pickedFile == null) {
+      return;
+    }
 
     setState(() {
       _image = File(pickedFile.path);
@@ -59,10 +65,10 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                  width: 300,
+                  width: 100,
                   child: _image == null
                       ? Text('No image selected.')
-                      : Image.file(_image)),
+                      : Image.file(_image!)),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
