@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "963302852239",
+    "project_id": "privatediary-cac71",
+    "storage_bucket": "privatediary-cac71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963302852239:android:0d976ac0e96ec83a1052fa",
+        "android_client_info": {
+          "package_name": "com.example.shared_diary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963302852239-8olnpeqbb217crgf7vptjpg6vsfk5r3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIrH0sCeSMpm6n4Bxb9Va8vfP_rybkVmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963302852239-8olnpeqbb217crgf7vptjpg6vsfk5r3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
