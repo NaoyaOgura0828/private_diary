@@ -21,7 +21,8 @@ class SharedDiary extends StatelessWidget {
       title: '日記投稿アプリ',
       theme: ThemeData.dark(),
       //home: Login(),
-      home: DiaryCreate(), // デバッグ用
+      //home: DiaryCreate(), // デバッグ用
+      home: DiaryDetail(),
     );
   }
 }
