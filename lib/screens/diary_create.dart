@@ -1,7 +1,10 @@
 import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shared_diary/screens/diary_list.dart';
 
 class DiaryCreate extends StatefulWidget {
   @override
@@ -9,12 +12,13 @@ class DiaryCreate extends StatefulWidget {
 }
 
 class _DiaryCreateState extends State<DiaryCreate> {
-  TextEditingController titleControler = TextEditingController();
-  TextEditingController bodyTextController = TextEditingController();
+  TextEditingController titleControler = TextEditingController(); // タイトル用コントローラー
+  TextEditingController bodyTextController = TextEditingController(); // 本文用コントローラー
   final picker = ImagePicker();
   File? _image;
 
   Future getImageFromGallery() async {
+    /* ギャラリーから画像を取得 */
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
 
     setState(() {
@@ -76,7 +80,13 @@ class _DiaryCreateState extends State<DiaryCreate> {
                   child: Icon(Icons.photo_library),
                 ),
                 ElevatedButton(
-                  onPressed: () => null, // TODO 日記一覧画面に遷移 diary_list
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DiaryList(),
+                        )
+                    );
+                  }, // TODO 日記一覧画面に遷移 diary_list
                   child: Text(
                     '登録',
                     style: TextStyle(fontSize: 15.0),

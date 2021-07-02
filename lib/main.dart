@@ -22,8 +22,8 @@ class SharedDiary extends StatelessWidget {
     return MaterialApp(
       title: '日記投稿アプリ',
       theme: ThemeData.dark(),
-      home: Login(),
-      //home: DiaryCreate(), // デバッグ用
+      //home: Login(),
+      home: DiaryCreate(), // デバッグ用
       //home: DiaryDetail(),
     );
   }
