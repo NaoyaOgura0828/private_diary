@@ -1,4 +1,12 @@
+import 'dart:io';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:flutter/material.dart';
+import 'package:shared_diary/screens/diary_create.dart';
+
 
 
 class DiaryList extends StatefulWidget {
@@ -15,6 +23,13 @@ class _DiaryListState extends State<DiaryList> {
       appBar: AppBar(
         title: Text('日記一覧'),
         centerTitle: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(
+            context, MaterialPageRoute(
+          builder: (context) => DiaryCreate(),
+        ))
+
       ),
       body: SingleChildScrollView(
         child: Center(
