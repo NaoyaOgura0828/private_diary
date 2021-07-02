@@ -25,6 +25,7 @@ class SharedDiary extends StatelessWidget {
 }
 
 class Aythy extends StatefulWidget {
+  /*ログインまたはサインアップ*/
   @override
   _AythyState createState() => _AythyState();
 }
@@ -142,6 +143,7 @@ class _AythyState extends State<Aythy> {
 }
 
 class DiaryList extends StatefulWidget {
+  /* 日記の一覧 */
   const DiaryList({Key? key}) : super(key: key);
 
   @override
@@ -155,6 +157,18 @@ class _DiaryListState extends State<DiaryList> {
       appBar: AppBar(
         title: Text('日記一覧'),
         centerTitle: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.create,
+        ),
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DiaryCreate(),
+              ));
+        },
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -174,7 +188,9 @@ class _DiaryListState extends State<DiaryList> {
   }
 }
 
+
 class DiaryCreate extends StatefulWidget {
+  /* 日記の作成 */
   @override
   _DiaryCreateState createState() => _DiaryCreateState();
 }
